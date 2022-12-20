@@ -1,13 +1,29 @@
 body {
-  background-image: url("/img/background.jpg");
+  background-image: url("/img/background5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  /* height: 100vh; */
+  font-family: Arial, sans-serif;
 }
 .weather-app {
   max-width: 800px;
   background: rgba(0, 0, 0, 0.8);
-  margin: 0 auto;
+  margin: 100px auto;
+  padding: 20px;
   border-radius: 10px;
   color: white;
+}
+
+h1 {
+  font-size: 32px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  opacity: 0.8;
+  font-size: 16px;
 }
