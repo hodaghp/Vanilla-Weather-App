@@ -61,8 +61,14 @@ ul {
 }
 
 li {
-  text-transform: capitalize;
   list-style: none;
   opacity: 0.8;
   font-size: 16px;
+}
+.left-info {
+  font-style: italic;
+}
+
+li::first-letter {
+  text-transform: capitalize;
 }
