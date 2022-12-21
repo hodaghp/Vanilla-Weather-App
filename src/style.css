@@ -7,11 +7,38 @@ body {
 }
 .weather-app {
   max-width: 800px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   margin: 100px auto;
   padding: 20px;
   border-radius: 10px;
   color: white;
+}
+.overview {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+.d-flex {
+  align-items: center;
+}
+.main-temperature-icon {
+  width: 150px;
+}
+
+.temperature strong {
+  font-size: 80px;
+}
+.temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -45px;
+  opacity: 0.8;
+}
+.description {
+  text-align: center;
+  color: rgb(126, 124, 124);
+}
+.info {
+  text-align: center;
 }
 
 h1 {
