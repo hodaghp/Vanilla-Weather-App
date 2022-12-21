@@ -42,7 +42,14 @@ body {
   color: rgb(126, 124, 124);
 }
 .info {
+  color: rgb(165, 163, 163);
+  font-style: italic;
   text-align: center;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+.info:hover {
+  color: white;
 }
 
 h1 {
@@ -54,6 +61,7 @@ ul {
 }
 
 li {
+  text-transform: capitalize;
   list-style: none;
   opacity: 0.8;
   font-size: 16px;
