@@ -16,6 +16,7 @@ body {
 .overview {
   margin-top: 50px;
   margin-bottom: 0px;
+  margin-left: 20px;
 }
 .d-flex {
   align-items: center;
@@ -26,11 +27,14 @@ body {
 
 .temperature strong {
   font-size: 80px;
+  position: relative;
+  left: -15px;
 }
 .temperature .units {
   position: relative;
   font-size: 16px;
   top: -45px;
+  left: -15px;
   opacity: 0.8;
 }
 .description {
