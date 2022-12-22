@@ -44,9 +44,18 @@ function displayTemperature(response) {
       ` http://openweathermap.org/img/wn/${weatherIcon}.png`
     );
 }
+function search(city) {
+  let apiKey = "3ee42c7bb4064d140b4cd8b3cb917db0";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-let apiKey = "3ee42c7bb4064d140b4cd8b3cb917db0";
-let city = "Sydney";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-input");
+  let cityName = cityInput.value;
+  search(cityName);
+}
+search("Ahvaz");
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

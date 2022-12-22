@@ -14,7 +14,7 @@ body {
   color: white;
 }
 .overview {
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 0px;
   margin-left: 20px;
 }
@@ -54,6 +54,31 @@ body {
 
 .left-info {
   font-style: italic;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#search-input {
+  width: 300px;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 25px;
+  background: rgba(100, 100, 100, 0.6);
+  color: white;
+}
+#button-submit {
+  margin: 10px;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 11px;
+  background: rgba(100, 100, 100, 0.6);
+  color: rgb(159, 159, 159);
+  font-size: larger;
+}
+#button-submit:hover {
+  background: rgba(100, 100, 100, 0.4);
 }
 h1 {
   font-size: 32px;
