@@ -21,7 +21,7 @@ body {
 .d-flex {
   align-items: center;
 }
-.main-temperature-icon {
+#main-temperature-icon {
   width: 150px;
 }
 
@@ -52,6 +52,9 @@ body {
   color: white;
 }
 
+.left-info {
+  font-style: italic;
+}
 h1 {
   font-size: 32px;
 }
@@ -64,9 +67,6 @@ li {
   list-style: none;
   opacity: 0.8;
   font-size: 16px;
-}
-.left-info {
-  font-style: italic;
 }
 
 li::first-letter {
