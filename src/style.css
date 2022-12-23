@@ -21,9 +21,6 @@ body {
 .d-flex {
   align-items: center;
 }
-#main-temperature-icon {
-  width: 150px;
-}
 
 .temperature strong {
   font-size: 80px;
@@ -36,6 +33,9 @@ body {
   top: -45px;
   left: -15px;
   opacity: 0.8;
+}
+.temperature .active {
+  color: rgb(255, 255, 255);
 }
 .description {
   text-align: center;
@@ -60,6 +60,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+#main-temperature-icon {
+  width: 150px;
+}
 #search-input {
   width: 300px;
   border: none;
@@ -80,6 +83,12 @@ body {
 #button-submit:hover {
   background: rgba(100, 100, 100, 0.4);
 }
+#fahrenheit-link,
+#celsius-link {
+  text-decoration: none;
+  cursor: default;
+}
+
 h1 {
   font-size: 32px;
 }

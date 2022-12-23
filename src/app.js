@@ -31,6 +31,8 @@ function displayTemperature(response) {
   let data = formatDate(response.data.dt * 1000);
   let weatherIcon = response.data.weather[0].icon;
 
+  celsiusTemperature = temperature;
+
   document.querySelector("#current-temperature").innerHTML = temperature;
   document.querySelector("#city").innerHTML = city;
   document.querySelector("#description").innerHTML = weatherDiscription;
@@ -56,6 +58,32 @@ function handleSubmit(event) {
   let cityName = cityInput.value;
   search(cityName);
 }
-search("Ahvaz");
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  // remve the active class from the fahrenhite link
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  document.querySelector("#current-temperature").innerHTML =
+    Math.round(celsiusTemperature);
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  // remve the active class from the celsius link
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  document.querySelector("#current-temperature").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
+}
+let celsiusTemperature = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Ahvaz");
