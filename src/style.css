@@ -39,7 +39,6 @@ body {
 }
 .description {
   text-align: center;
-  color: rgb(126, 124, 124);
 }
 .info {
   color: rgb(165, 163, 163);
@@ -88,7 +87,13 @@ body {
   text-decoration: none;
   cursor: default;
 }
-
+#source-link {
+  color: rgb(126, 124, 124);
+  text-decoration: none;
+}
+#source-link:hover {
+  color: rgb(165, 163, 163);
+}
 h1 {
   font-size: 32px;
 }
@@ -105,4 +110,9 @@ li {
 
 li::first-letter {
   text-transform: capitalize;
+}
+@media (max-width: 1350px) {
+  body {
+    height: 100vh;
+  }
 }
