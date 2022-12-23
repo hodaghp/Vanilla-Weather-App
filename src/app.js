@@ -23,13 +23,14 @@ function formatDate(timestemp) {
 }
 
 function displayTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let city = response.data.name;
-  let weatherDiscription = response.data.weather[0].description;
-  let humidity = response.data.main.humidity;
+  // console.log(response);
+  let temperature = Math.round(response.data.temperature.current);
+  let city = response.data.city;
+  let weatherDiscription = response.data.condition.description;
+  let humidity = response.data.temperature.humidity;
   let wind = Math.round(response.data.wind.speed);
-  let data = formatDate(response.data.dt * 1000);
-  let weatherIcon = response.data.weather[0].icon;
+  let data = formatDate(response.data.time * 1000);
+  let weatherIcon = response.data.condition.icon_url;
 
   celsiusTemperature = temperature;
 
@@ -41,14 +42,11 @@ function displayTemperature(response) {
   document.querySelector("#date").innerHTML = data;
   document
     .querySelector("#main-temperature-icon")
-    .setAttribute(
-      "src",
-      ` http://openweathermap.org/img/wn/${weatherIcon}.png`
-    );
+    .setAttribute("src", weatherIcon);
 }
 function search(city) {
-  let apiKey = "3ee42c7bb4064d140b4cd8b3cb917db0";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiKey = "0e93tea8c21386bobfdd3fceaad47a24";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
 

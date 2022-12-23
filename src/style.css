@@ -22,7 +22,7 @@ body {
   align-items: center;
 }
 
-.temperature strong {
+#current-temperature {
   font-size: 80px;
   position: relative;
   left: -15px;
@@ -114,5 +114,10 @@ li::first-letter {
 @media (max-width: 1350px) {
   body {
     height: 100vh;
+  }
+}
+@media (max-width: 550px) {
+  #current-temperature {
+    font-size: 60px;
   }
 }
