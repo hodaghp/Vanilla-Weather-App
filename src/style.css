@@ -118,9 +118,23 @@ li::first-letter {
 }
 @media (max-width: 415px) {
   #current-temperature {
-    font-size: 60px;
+    font-size: 40px;
   }
   #main-temperature-icon {
     width: 100px;
+  }
+  .col-9 {
+    width: 60%;
+  }
+  .col-3 {
+    width: 40%;
+  }
+
+  .temperature .units {
+    position: relative;
+    font-size: 16px;
+    top: -28px;
+    left: -15px;
+    opacity: 0.8;
   }
 }
