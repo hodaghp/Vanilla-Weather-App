@@ -116,8 +116,11 @@ li::first-letter {
     height: 100vh;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 415px) {
   #current-temperature {
     font-size: 60px;
+  }
+  #main-temperature-icon {
+    width: 100px;
   }
 }
