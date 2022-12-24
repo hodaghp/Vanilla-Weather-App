@@ -119,9 +119,12 @@ li::first-letter {
 @media (max-width: 415px) {
   #current-temperature {
     font-size: 40px;
+    position: relative;
+    left: -15px;
+    top: 2px;
   }
   #main-temperature-icon {
-    width: 100px;
+    width: 80px;
   }
   .col-9 {
     width: 60%;
@@ -132,9 +135,12 @@ li::first-letter {
 
   .temperature .units {
     position: relative;
-    font-size: 16px;
-    top: -28px;
+    font-size: 10px;
+    top: -24px;
     left: -15px;
     opacity: 0.8;
+  }
+  .description {
+    font-size: 12px;
   }
 }
