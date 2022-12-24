@@ -22,11 +22,6 @@ body {
   align-items: center;
 }
 
-#current-temperature {
-  font-size: 80px;
-  position: relative;
-  left: -15px;
-}
 .temperature .units {
   position: relative;
   font-size: 16px;
@@ -39,6 +34,7 @@ body {
 }
 .description {
   text-align: center;
+  margin-top: 30px;
 }
 .info {
   color: rgb(165, 163, 163);
@@ -58,6 +54,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.weather-forcast {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+.weather-forcast-day {
+  font-size: 24px;
+  opacity: 0.8;
+}
+.weather-temperature-forcast {
+  font-size: 25px;
+}
+.weather-forcast-temperature-min {
+  opacity: 0.8;
+}
+
+#current-temperature {
+  font-size: 80px;
+  position: relative;
+  left: -15px;
 }
 #main-temperature-icon {
   width: 150px;
@@ -116,12 +134,13 @@ li::first-letter {
     height: 100vh;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 515px) {
   #current-temperature {
     font-size: 40px;
     position: relative;
     left: -15px;
     top: 2px;
+    margin-left: 10px;
   }
   #main-temperature-icon {
     width: 80px;
@@ -142,5 +161,8 @@ li::first-letter {
   }
   .description {
     font-size: 12px;
+  }
+  #search-input {
+    width: 200px;
   }
 }
