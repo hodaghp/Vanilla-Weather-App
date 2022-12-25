@@ -69,7 +69,7 @@ body {
   font-size: 25px;
 }
 .weather-forcast-temperature-min {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 #current-temperature {

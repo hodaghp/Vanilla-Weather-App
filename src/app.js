@@ -22,6 +22,34 @@ function formatDate(timestemp) {
   return `${day}  ${hour}:${minutes}`;
 }
 
+function displayForcast() {
+  let forcastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forcastElement = document.querySelector("#forcast");
+
+  days.forEach(function (day) {
+    forcastHTML =
+      forcastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forcast-day">${day}</div>
+        <img
+          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+          alt="weather image"
+          width="50"
+        />
+        <div class="weather-temperature-forcast">
+          <span class="weather-forcast-temperature-max">18°</span>
+          <span class="weather-forcast-temperature-min">12°</span>
+        </div>
+      </div>
+            `;
+  });
+
+  forcastHTML = forcastHTML + `</div>`;
+  forcastElement.innerHTML = forcastHTML;
+}
+
 function displayTemperature(response) {
   // console.log(response);
   let temperature = Math.round(response.data.temperature.current);
@@ -43,6 +71,8 @@ function displayTemperature(response) {
   document
     .querySelector("#main-temperature-icon")
     .setAttribute("src", weatherIcon);
+
+  displayForcast();
 }
 function search(city) {
   let apiKey = "0e93tea8c21386bobfdd3fceaad47a24";
