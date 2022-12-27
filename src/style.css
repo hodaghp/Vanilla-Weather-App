@@ -161,6 +161,7 @@ li::first-letter {
   }
   .weather-forcast {
     margin: 0;
+    text-align: center;
   }
   .weather-forcast-day,
   .weather-temperature-forcast {
