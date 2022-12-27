@@ -44,6 +44,7 @@ function displayForcast(response) {
         <img
           src= "${forcastDay.condition.icon_url}"
           alt="weather image"
+          id="forcast-image"
           width="50"
         />
         <div class="weather-temperature-forcast">

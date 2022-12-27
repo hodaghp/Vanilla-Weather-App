@@ -167,6 +167,9 @@ li::first-letter {
   .weather-temperature-forcast {
     font-size: 15px;
   }
+  #forcast-image {
+    margin-left: -8px;
+  }
   .description {
     font-size: 12px;
   }
