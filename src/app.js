@@ -22,29 +22,41 @@ function formatDate(timestemp) {
   return `${day}  ${hour}:${minutes}`;
 }
 
+function formatDay(time) {
+  let date = new Date(time * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForcast(response) {
+  let forcast = response.data.daily;
   console.log(response.data.daily);
   let forcastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+
   let forcastElement = document.querySelector("#forcast");
 
-  days.forEach(function (day) {
-    forcastHTML =
-      forcastHTML +
-      `
+  forcast.forEach(function (forcastDay, index) {
+    if (index < 6) {
+      forcastHTML += `
       <div class="col-2">
-        <div class="weather-forcast-day">${day}</div>
+        <div class="weather-forcast-day">${formatDay(forcastDay.time)}</div>
         <img
-          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+          src= "${forcastDay.condition.icon_url}"
           alt="weather image"
           width="50"
         />
         <div class="weather-temperature-forcast">
-          <span class="weather-forcast-temperature-max">18°</span>
-          <span class="weather-forcast-temperature-min">12°</span>
+          <span class="weather-forcast-temperature-max">${Math.round(
+            forcastDay.temperature.maximum
+          )}°</span>
+          <span class="weather-forcast-temperature-min">${Math.round(
+            forcastDay.temperature.minimum
+          )}°</span>
         </div>
       </div>
             `;
+    }
   });
 
   forcastHTML = forcastHTML + `</div>`;
