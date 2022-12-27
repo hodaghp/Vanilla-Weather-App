@@ -159,6 +159,13 @@ li::first-letter {
     left: -15px;
     opacity: 0.8;
   }
+  .weather-forcast {
+    margin: 0;
+  }
+  .weather-forcast-day,
+  .weather-temperature-forcast {
+    font-size: 15px;
+  }
   .description {
     font-size: 12px;
   }
