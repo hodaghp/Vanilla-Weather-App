@@ -180,6 +180,10 @@ li::first-letter {
   .weather-temperature-forcast {
     font-size: 15px;
   }
+  .card .forcast-image {
+    position: relative;
+    left: -5px;
+  }
 
   .description {
     font-size: 12px;
