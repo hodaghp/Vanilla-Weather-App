@@ -39,23 +39,25 @@ function displayForcast(response) {
   forcast.forEach(function (forcastDay, index) {
     if (index < 6) {
       forcastHTML += `
-      <div class="col-2">
-        <div class="weather-forcast-day">${formatDay(forcastDay.time)}</div>
-        <img
-          src= "${forcastDay.condition.icon_url}"
-          alt="weather image"
-          id="forcast-image"
-          width="50"
-        />
-        <div class="weather-temperature-forcast">
-          <span class="weather-forcast-temperature-max">${Math.round(
-            forcastDay.temperature.maximum
-          )}°</span>
-          <span class="weather-forcast-temperature-min">${Math.round(
-            forcastDay.temperature.minimum
-          )}°</span>
+      <div class="col-2 card">
+        
+          <div class="weather-forcast-day">${formatDay(forcastDay.time)}</div>
+          <img
+            src= "${forcastDay.condition.icon_url}"
+            alt="weather image"
+            class="forcast-image"
+            width="50"
+          />
+          <div class="weather-temperature-forcast">
+            <span class="weather-forcast-temperature-max">${Math.round(
+              forcastDay.temperature.maximum
+            )}°</span>
+            <span class="weather-forcast-temperature-min">${Math.round(
+              forcastDay.temperature.minimum
+            )}°</span>
+          </div>
         </div>
-      </div>
+      
             `;
     }
   });
