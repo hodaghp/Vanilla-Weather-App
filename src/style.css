@@ -173,8 +173,11 @@ li::first-letter {
     opacity: 0.8;
   }
   .weather-forcast {
-    margin: 0;
+    margin: 5px 0 0 0;
     text-align: center;
+  }
+  .weather-forcast-day {
+    width: 40px;
   }
   .weather-forcast-day,
   .weather-temperature-forcast {
